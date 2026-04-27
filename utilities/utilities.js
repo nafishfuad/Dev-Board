@@ -5,8 +5,9 @@ function plusTotalTask() {
 }
 function minusTotalTask() {
   let completedTask = document.getElementById("task-assigned-number").innerText;
-  let convertedCompletedTask = parseInt(completedTask) - 1;
-  document.getElementById('task-assigned-number').innerText = convertedCompletedTask;
+  let convertedCompletedTask = parseInt(completedTask);
+  let sum = convertedCompletedTask - 1;
+  document.getElementById('task-assigned-number').innerText = sum;
 }
 
 function dayToday() {

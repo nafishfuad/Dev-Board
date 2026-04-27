@@ -1,4 +1,3 @@
-const buttonsClick = document.getElementsByClassName("tasks-cards-btn");
 const date = new Date();
 document.getElementById("day-name").innerText =
   date.toLocaleDateString("en-GB", { weekday: "long" }) + ",";
@@ -8,6 +7,8 @@ document.getElementById("date-today").innerText = date.toLocaleDateString(
 );
 
 // task card button functions
+
+const buttonsClick = document.getElementsByClassName("tasks-cards-btn");
 
 for (const button of buttonsClick) {
   button.addEventListener("click", function (event) {
@@ -31,26 +32,43 @@ for (const button of buttonsClick) {
       </p>
     `;
     activity.appendChild(div);
+    alert("Board update successfully");
+
+    // all task completed alert
+    let completedTask = document.getElementById(
+      "task-assigned-number",
+    ).innerText;
+    let convertedCompletedTask = parseInt(completedTask);
+    if (convertedCompletedTask === 0) {
+      alert("congrates!! You have completed all the current task.");
+    }
   });
 }
 
 // remove activity list
-  const removeButton = document.getElementById("activity-remove-btn");
-  removeButton.addEventListener('click', function (event) {
-      event.preventDefault;
-      const activityCards = document.querySelectorAll('.activity-card');
-      for (const card of activityCards) {
-        card.remove();
-      };
-  })
+const removeButton = document.getElementById("activity-remove-btn");
+removeButton.addEventListener("click", function (event) {
+  event.preventDefault;
+  const activityCards = document.querySelectorAll(".activity-card");
+  for (const card of activityCards) {
+    card.remove();
+  }
+});
 
-  // bg color change function
+// bg color change function
 
-  const colorBtn = document.getElementById('bg-color');
+const colorBtn = document.getElementById("bg-color");
 
-  colorBtn.addEventListener('click', function(event){
-    event.preventDefault;
-    document.getElementById('body').style.backgroundColor = randomColor();
-  })
+colorBtn.addEventListener("click", function (event) {
+  event.preventDefault;
+  document.getElementById("body").style.backgroundColor = randomColor();
+});
 
-  
+
+// blog page redirect 
+
+document.getElementById('discover-btn').addEventListener('click',
+  function() {
+    window.location.href = './blogs.html'
+  }
+);

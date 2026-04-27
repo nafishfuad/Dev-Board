@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBoard - Organize Your Task</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body id="body" class="bg-sky-50 min-h-[100vh]">
+    <!-- Main Container -->
+    <div class="max-w-[1440px] mx-auto p-6">
+      <!-- Nav section -->
+      <section class="mb-5">
+        <div class="navbar bg-base-100 shadow-sm p-6 rounded-2xl">
+          <div class="flex-1">
+            <div class="flex">
+              <img class="w-12 mr-3" src="assets/logo.png" alt="logo" />
+              <h1 class="text-4xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+          </div>
+          <div class="flex-none">
+            <div class="flex justify-center items-center gap-8">
+              <div
+                class="flex gap-3 px-4 py-3 bg-slate-200 rounded-full"
+                id="task-count"
+              >
+                <img class="size-8" src="assets/checkbox.png" />
+                <h3 id="completed-task" class="text-3xl font-bold">22</h3>
+              </div>
+              <div class="p-3 bg-slate-200 rounded-full cursor-pointer" id="bg-color">
+                <img src="assets/theme-btn.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- blog section -->
+      <h1 class="flex justify-center items-center min-w-full font-extrabold text-3xl py-3 mb-4">Blogs</h1>
+      <section class="flex flex-col gap-4">
+        <div class="bg-white rounded-lg">
+            <div class="p-6 border-b-2 border-dashed border-gray-300">
+                <h2 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h2>
+            </div>
+            <div class="p-6">
+                <p class="font-medium text-xl text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur ullam aliquam, quo itaque debitis, inventore enim suscipit, quod repellendus cum eos tenetur blanditiis corporis ratione assumenda laborum quas nulla.</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg">
+            <div class="p-6 border-b-2 border-dashed border-gray-300">
+                <h2 class="text-2xl font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+            </div>
+            <div class="p-6">
+                <p class="font-medium text-xl text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur ullam aliquam, quo itaque debitis, inventore enim suscipit, quod repellendus cum eos tenetur blanditiis corporis ratione assumenda laborum quas nulla.</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg">
+            <div class="p-6 border-b-2 border-dashed border-gray-300">
+                <h2 class="text-2xl font-bold">Question-3: What is event delegation in the DOM?</h2>
+            </div>
+            <div class="p-6">
+                <p class="font-medium text-xl text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur ullam aliquam, quo itaque debitis, inventore enim suscipit, quod repellendus cum eos tenetur blanditiis corporis ratione assumenda laborum quas nulla.</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg">
+            <div class="p-6 border-b-2 border-dashed border-gray-300">
+                <h2 class="text-2xl font-bold">Question-4: What is event bubbling in the DOM?</h2>
+            </div>
+            <div class="p-6">
+                <p class="font-medium text-xl text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur ullam aliquam, quo itaque debitis, inventore enim suscipit, quod repellendus cum eos tenetur blanditiis corporis ratione assumenda laborum quas nulla.</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg">
+            <div class="p-6 border-b-2 border-dashed border-gray-300">
+                <h2 class="text-2xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+            </div>
+            <div class="p-6">
+                <p class="font-medium text-xl text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur ullam aliquam, quo itaque debitis, inventore enim suscipit, quod repellendus cum eos tenetur blanditiis corporis ratione assumenda laborum quas nulla.</p>
+            </div>
+        </div>
+      </section>
+
+    </div>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./utilities/utilities.js"></script>
+  </body>
+</html>
