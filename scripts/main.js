@@ -12,7 +12,7 @@ const buttonsClick = document.getElementsByClassName("tasks-cards-btn");
 
 for (const button of buttonsClick) {
   button.addEventListener("click", function (event) {
-    event.preventDefault;
+    event.preventDefault();
     button.setAttribute("disabled", true);
     plusTotalTask();
     minusTotalTask();
@@ -48,7 +48,7 @@ for (const button of buttonsClick) {
 // remove activity list
 const removeButton = document.getElementById("activity-remove-btn");
 removeButton.addEventListener("click", function (event) {
-  event.preventDefault;
+  event.preventDefault();
   const activityCards = document.querySelectorAll(".activity-card");
   for (const card of activityCards) {
     card.remove();
@@ -60,7 +60,7 @@ removeButton.addEventListener("click", function (event) {
 const colorBtn = document.getElementById("bg-color");
 
 colorBtn.addEventListener("click", function (event) {
-  event.preventDefault;
+  event.preventDefault();
   document.getElementById("body").style.backgroundColor = randomColor();
 });
 
