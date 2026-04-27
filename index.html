@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBoard - Organize Your Task</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-sky-50">
+    <!-- Main Container -->
+    <div class="max-w-[1440px] mx-auto p-6">
+      <!-- Nav section -->
+      <section class="mb-5">
+        <div class="navbar bg-base-100 shadow-sm p-6 rounded-2xl">
+          <div class="flex-1">
+            <div class="flex">
+              <img class="w-12 mr-3" src="assets/logo.png" alt="logo" />
+              <h1 class="text-4xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+          </div>
+          <div class="flex-none">
+            <div class="flex justify-center items-center gap-8">
+              <div
+                class="flex gap-3 px-4 py-3 bg-slate-200 rounded-full"
+                id="task-count"
+              >
+                <img class="size-8" src="assets/checkbox.png" />
+                <h3 id="completed-task" class="text-3xl font-bold">22</h3>
+              </div>
+              <div class="p-3 bg-slate-200 rounded-full" id="bg-color">
+                <img src="assets/theme-btn.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- main section -->
+      <section class="flex gap-6">
+        <!-- main left section -->
+        <div class="bg-base-100 p-6 rounded-2xl min-w-[75%]" id="cards-section">
+          <!-- left top info section -->
+          <div
+            class="flex justify-between items-center pb-8 border-b-2 border-dashed border-gray-300"
+            id="cards-top"
+          >
+            <div class="flex bg-slate-200 p-6 rounded-xl">
+              <div class="p-5 rounded-full bg-white mr-4">
+                <img class="size-7" src="assets/checkbox.png" />
+              </div>
+              <div>
+                <h5 class="font-medium text-lg text-gray-700">Task Assigned</h5>
+                <h3 id="task-assigned-number" class="font-bold text-3xl">06</h3>
+              </div>
+            </div>
+            
+            <div class="flex py-6 pr-20 pl-10 bg-blue-400 rounded-xl">
+              <div class="mr-5">
+                <img class="w-16" src="assets/board.png" />
+              </div>
+              <div>
+                <h3 class="text-2xl font-medium text-white">
+                  Discover Something <br />
+                  New Today!
+                </h3>
+              </div>
+            </div>
+
+            <div class="flex py-5 px-5 bg-slate-200 rounded-xl">
+              <div class="p-4 bg-white rounded-full mr-5">
+                <img class="size-7" src="assets/calender.png" />
+              </div>
+              <div>
+                <p id="day-name" class="text-2xl font-medium"></p>
+                <h4 id="date-today" class="text-2xl font-bold"></h4>
+              </div>
+            </div>
+          </div>
+          <!-- left tasks section -->
+          <div class="grid grid-cols-3 gap-9 mt-8" id="cards-main">
+            <div class="task-card bg-slate-200 p-5 rounded-2xl">
+              <div class="border-b-2 border-dashed border-gray-400">
+                <p
+                  class="text-base font-medium px-2 py-1 bg-white rounded-lg inline-block mb-4"
+                >
+                  Shop Ease
+                </p>
+                <h2 class="font-medium text-2xl mb-3">
+                  Fix Mobile Button Issue
+                </h2>
+                <p class="p-4 rounded-xl mb-3 bg-white">
+                  Debug using Chrome DevTools, check for overlappin
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="font-normal text-sm">Deadline</p>
+                  <h4 class="text-lg font-medium">21 march 2025</h4>
+                </div>
+                <div>
+                  <button id="task-btn-id"
+                    class="btn tasks-cards-btn text-white text-lg font-medium py-2 px-5 bg-[#3752FD] rounded-xl"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="task-card bg-slate-200 p-5 rounded-2xl">
+              <div class="border-b-2 border-dashed border-gray-400">
+                <p
+                  class="text-base font-medium px-2 py-1 bg-white rounded-lg inline-block mb-4"
+                >
+                  CloudSync
+                </p>
+                <h2 class="font-medium text-2xl mb-3">
+                  Add Dark Mode
+                </h2>
+                <p class="p-4 rounded-xl mb-3 bg-white">
+                  Debug using Chrome DevTools, check for overlappin
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="font-normal text-sm">Deadline</p>
+                  <h4 class="text-lg font-medium">21 march 2025</h4>
+                </div>
+                <div>
+                  <button id="task-btn-id"
+                    class="btn tasks-cards-btn text-white text-lg font-medium py-2 px-5 bg-[#3752FD] rounded-xl"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="task-card bg-slate-200 p-5 rounded-2xl">
+              <div class="border-b-2 border-dashed border-gray-400">
+                <p
+                  class="text-base font-medium px-2 py-1 bg-white rounded-lg inline-block mb-4"
+                >
+                  SwiftPay
+                </p>
+                <h2 class="font-medium text-2xl mb-3">
+                  Optimize  Home page
+                </h2>
+                <p class="p-4 rounded-xl mb-3 bg-white">
+                  Debug using Chrome DevTools, check for overlappin
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="font-normal text-sm">Deadline</p>
+                  <h4 class="text-lg font-medium">21 march 2025</h4>
+                </div>
+                <div>
+                  <button id="task-btn-id"
+                    class="btn tasks-cards-btn text-white text-lg font-medium py-2 px-5 bg-[#3752FD] rounded-xl"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="task-card bg-slate-200 p-5 rounded-2xl">
+              <div class="border-b-2 border-dashed border-gray-400">
+                <p
+                  class="text-base font-medium px-2 py-1 bg-white rounded-lg inline-block mb-4"
+                >
+                  Meta
+                </p>
+                <h2 class="font-medium text-2xl mb-3">
+                  Add new emoji 🤲
+                </h2>
+                <p class="p-4 rounded-xl mb-3 bg-white">
+                  Debug using Chrome DevTools, check for overlappin
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="font-normal text-sm">Deadline</p>
+                  <h4 class="text-lg font-medium">21 march 2025</h4>
+                </div>
+                <div>
+                  <button id="task-btn-id"
+                    class="btn tasks-cards-btn text-white text-lg font-medium py-2 px-5 bg-[#3752FD] rounded-xl"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="task-card bg-slate-200 p-5 rounded-2xl">
+              <div class="border-b-2 border-dashed border-gray-400">
+                <p
+                  class="text-base font-medium px-2 py-1 bg-white rounded-lg inline-block mb-4"
+                >
+                  Google LLC
+                </p>
+                <h2 class="font-medium text-2xl mb-3">
+                  Integrate OpenAI API 
+                </h2>
+                <p class="p-4 rounded-xl mb-3 bg-white">
+                  Debug using Chrome DevTools, check for overlappin
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="font-normal text-sm">Deadline</p>
+                  <h4 class="text-lg font-medium">21 march 2025</h4>
+                </div>
+                <div>
+                  <button id="task-btn-id"
+                    class="btn tasks-cards-btn text-white text-lg font-medium py-2 px-5 bg-[#3752FD] rounded-xl"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="task-card bg-slate-200 p-5 rounded-2xl">
+              <div class="border-b-2 border-dashed border-gray-400">
+                <p
+                  class="text-base font-medium px-2 py-1 bg-white rounded-lg inline-block mb-4"
+                >
+                  Glassdoar
+                </p>
+                <h2 class="font-medium text-2xl mb-3">
+                  Improve Job searching 
+                </h2>
+                <p class="p-4 rounded-xl mb-3 bg-white">
+                  Debug using Chrome DevTools, check for overlappin
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div>
+                  <p class="font-normal text-sm">Deadline</p>
+                  <h4 class="text-lg font-medium">21 march 2025</h4>
+                </div>
+                <div>
+                  <button id="task-btn-id"
+                    class="btn tasks-cards-btn text-white text-lg font-medium py-2 px-5 bg-[#3752FD] rounded-xl"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- main right section -->
+        <div id="activity-section" class="bg-base-100 p-6 rounded-2xl min-w-[25%]">
+          <div
+            class="flex flex-col justify-center items-center gap-4 border-b-2 border-gray-300 border-dashed"
+          >
+            <div class="flex justify-center items-center gap-4">
+              <img class="size-6" src="assets/activity.png" />
+              <h3 class="text-xl font-semibold">Activity Log</h3>
+            </div>
+            <button id="activity-remove-btn"
+              class="btn text-base font-medium text-white bg-blue-500 rounded-lg mb-6"
+            >
+              Clear History
+            </button>
+          </div>
+          <div id="Activity-log">
+            
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./utilities/utilities.js"></script>
+  </body>
+</html>
