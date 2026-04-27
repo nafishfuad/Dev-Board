@@ -7,7 +7,7 @@ document.getElementById("date-today").innerText = date.toLocaleDateString(
   { month: "long", day: "numeric", year: "numeric" },
 );
 
-// let time = date.toLocaleTimeString('en-Us', {hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true});
+// task card button functions
 
 for (const button of buttonsClick) {
   button.addEventListener("click", function (event) {
@@ -43,3 +43,14 @@ for (const button of buttonsClick) {
         card.remove();
       };
   })
+
+  // bg color change function
+
+  const colorBtn = document.getElementById('bg-color');
+
+  colorBtn.addEventListener('click', function(event){
+    event.preventDefault;
+    document.getElementById('body').style.backgroundColor = randomColor();
+  })
+
+  
